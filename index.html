@@ -14,11 +14,6 @@
   <script>
 	  'use strict';
 
-	  var delay_options = [2000, 3000, 5000];
-	  var index = Math.floor(Math.random() * delay_options.length);
-	  var second_index = Math.floor(Math.random() * delay_options.length);
-	  var third_index = Math.floor(Math.random() * delay_options.length);
-
 	  var survey_question = {
 	    type: "survey-multi-choice",
 	    questions: ["How many seconds did it take for the Web Browser to launch?"],
@@ -28,10 +23,12 @@
 	  };
 
 	  /* randomize the delay and order of the versions. Add a survey question to each of them */
+	  /* delay is defined as relative time between events */
+	  /* first paint, search bar, topsites, pocket*/
 	  var test_data = [
-	      {data: {version: 1, delay: delay_options[index], js_url: "static/js/experiment.js"}, timeline: [{}, survey_question]},
-	      {data: {version: 2, delay: delay_options[second_index], js_url: "static/js/experiment.js"}, timeline: [{}, survey_question]},
-	      {data: {version: Math.ceil(Math.random() * 2), delay: delay_options[third_index], js_url: "static/js/experiment.js"}, timeline: [{}, survey_question]}
+	      {data: {version: 1, delay: [500,500,500,500], js_url: "static/js/experiment.js"}, timeline: [{}, survey_question]},
+	      {data: {version: 1, delay: [100,300,10,50], js_url: "static/js/experiment.js"}, timeline: [{}, survey_question]},
+		  {data: {version: 1, delay: [250,40,0,3000], js_url: "static/js/experiment.js"}, timeline: [{}, survey_question]}
 	  ];
 
 	  /* define test block */

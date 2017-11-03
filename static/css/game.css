@@ -36,8 +36,8 @@
 
 .win,
 .startframe {
-    width: 800px;
-    height: 600px;
+    width: 1200px;
+    height: 800px;
 }
 
 .win {
@@ -47,11 +47,12 @@
     background-color: #fff;
     border: 1px solid dodgerblue;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+	z-index: 50;
 }
 
 #w1 {
-    left: 50px;
-    top: 50px;
+    left: 140px;
+    top: 140px;
 }
 
 #w2 {
@@ -60,11 +61,54 @@
 }
 
 .startframe {
-    background-color: #fff;
-    background-image: url('../img/search.png');
+    background-color: #fafafa;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 75%;
+	z-index: 51;
+}
+
+.searches {
+	width:48%;
+	height: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+	z-index:500;
+	margin: 0 auto;
+	background-image: url('../img/searchbar.png');
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: 100%;
+	opacity:0;
+}
+
+.topsites {
+	width:48%;
+	height: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+	z-index:501;
+	margin: 0 auto;
+	background-image: url('../img/topsites.png');
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: 100%;
+	opacity:0;
+}
+
+.pocket {
+	width:60%;
+	height: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+	z-index:502;
+	top: 90px;
+	margin: 0 auto;
+	background-image: url('../img/pocket.png');
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: 80%;
+	opacity:0;
 }
 
 .toolbar {
@@ -74,6 +118,7 @@
     background-position: top right, top left, top;
     background-size: auto 90%;
     transition: opacity 0.2s ease;
+	z-index: 51;
 }
 
 #taskbar {
